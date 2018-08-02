@@ -25,7 +25,7 @@ def sentmail(file_new):
 #连接 SMTP 服务器，此处用的126的 SMTP 服务器
     smtp.connect('smtp.126.com')
 #用户名密码
-    smtp.login('jifengxiaoyue1@126.com','xin890205')
+    smtp.login('username','password')
     smtp.sendmail(mail_from,mail_to,msg.as_string())
     smtp.quit()
     print 'email has send out !'
