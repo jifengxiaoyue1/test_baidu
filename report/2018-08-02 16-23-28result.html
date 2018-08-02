@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>百度搜索测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-08-02 10:24:39</p>
-<p class='attribute'><strong>Duration:</strong> 0:01:37.549000</p>
-<p class='attribute'><strong>Status:</strong> Pass 3</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-08-02 16:23:28</p>
+<p class='attribute'><strong>Duration:</strong> 0:02:25.991000</p>
+<p class='attribute'><strong>Status:</strong> Pass 4 Error 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -249,26 +249,86 @@ function showOutput(id, name) {
     <td colspan='5' align='center'>pass</td>
 </tr>
 
+<tr class='errorClass'>
+    <td>start_test_baiduset.StartTestBaiduset</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_start_test_baiduset</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        error</a>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: Traceback (most recent call last):
+  File "E:\pythonproject\baidu\test_baidu_GIT\test_baidu\start_test_baiduset.py", line 23, in test_start_test_baiduset
+    driver.find_element_by_link_text(u"æç´¢è®¾ç½®").click()
+  File "C:\Python27\lib\site-packages\selenium-3.13.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 427, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium-3.13.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 966, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium-3.13.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 320, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium-3.13.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: Unable to locate element: \u641c\u7d22\u8bbe\u7f6e
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
 <tr class='passClass'>
     <td>start_test_forwardback.StartTestForwardback</td>
     <td>1</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c4',1)">Detail</a></td>
 </tr>
 
-<tr id='pt3.1' class='hiddenRow'>
+<tr id='pt4.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_start_test_forwardback</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>start_test_gundongtiao.StartTestGundongtiao</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',1)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_start_test_gundongtiao</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>3</td>
-    <td>3</td>
+    <td>5</td>
+    <td>4</td>
     <td>0</td>
-    <td>0</td>
+    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>
