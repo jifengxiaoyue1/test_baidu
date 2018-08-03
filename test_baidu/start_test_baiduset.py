@@ -20,6 +20,12 @@ class StartTestBaiduset(unittest.TestCase):
         driver = self.driver
         driver.get(self.base_url)
         #进入搜索设置页
+        js = "var q=document.getElementByClassName('bdpfmenu');q.style.display='block';"
+
+        driver.execute_script(js)
+        
+        #bdpfmenu=driver.find_element_by_xpath("//*[@id='wrapper']/div[6]")
+        #ActionChains(driver).move_to_element(bdpfmenu).perform()
         driver.find_element_by_link_text(u"搜索设置").click()
         #设置每页搜索结果为20条
         m=driver.find_element_by_name("NR")

@@ -31,7 +31,7 @@ def sentmail(file_new):
     print 'email has send out !'
 #查找测试报告，调用发邮件功能
 def sendreport():
-    result_dir = 'E:/pythonproject/baidu/test_baidu_GIT/report/'
+    result_dir = 'E:/pythonproject/test_baidu/test_baidu_GIT/report/'
     lists=os.listdir(result_dir)
     lists.sort(key=lambda fn: os.path.getmtime(result_dir+"/"+fn) if not
 os.path.isdir(result_dir+"/"+fn) else 0)
@@ -61,7 +61,7 @@ for test in alltestnames:
     testunit.addTest(unittest.makeSuite(test))
 '''
 #把 test_baidu 目录添加到 path 下，这里用的相对路径
-listaa = 'E:/pythonproject/baidu/test_baidu_GIT/test_baidu'
+listaa = 'E:/pythonproject/test_baidu/test_baidu_GIT/test_baidu'
 def creatsuitel():
     testunit = unittest.TestSuite()
 #discover 方法定义
@@ -81,7 +81,7 @@ alltestnames = creatsuitel()
 now=time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
 
 #定义个报告存放路径，支持相对路径。
-filename = "E:/pythonproject/baidu/test_baidu_GIT/report/"+now+'result.html'
+filename = "E:/pythonproject/test_baidu/test_baidu_GIT/report/"+now+'result.html'
 fp = file(filename, 'wb')
 runner =HTMLTestRunner.HTMLTestRunner(
     stream=fp,
